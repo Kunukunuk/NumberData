@@ -11,11 +11,11 @@ import Foundation
 class DrawResult {
     var date: String?
     var winningNumbers: String?
-    var bouns: Int?
+    var multiplier: Int?
     
     init(dictionary: [String: Any]) {
         date = dictionary["draw_date"] as? String
         winningNumbers = dictionary["winning_numbers"] as? String
-        bouns = dictionary["bonus"] as? Int
+        bouns = dictionary["multiplier"] as? Int
     }
 }

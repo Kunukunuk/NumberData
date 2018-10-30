@@ -8,25 +8,39 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
+    var tableArray: [DrawResult]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.dataSource = self
         getData()
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LottoCell", for: indexPath) as! LottoCell
+        
+        return cell
     }
 
     func getData() {
         let session = URLSession(configuration: .default)
-        let url = URL(string: "https://data.ny.gov/resource/etu4-7qqz.json")!
+        let url = URL(string: "https://data.ny.gov/resource/8vkr-v8vh.json")!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 5)
         
         let task = session.dataTask(with: request) { (data, response, error) in
             if let data = data {
-                let dataDict = try! JSONSerialization.jsonObject(with: data, options: [])
-                print("data: \(dataDict)")
+                let dataDict = try! JSONSerialization.jsonObject(with: data, options: []) as! NSArray
+                for draw in dataDict {
+                    print("draw: \(draw)")
+                }
             } else {
                 print("error: \(error?.localizedDescription)")
             }
