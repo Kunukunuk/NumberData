@@ -29,9 +29,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LottoCell", for: indexPath) as! LottoCell
         
-        if !tableArray.isEmpty {
-            cell.draw = tableArray[indexPath.row]
-        }
+        cell.draw = tableArray[indexPath.row]
         
         return cell
     }
@@ -47,7 +45,6 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 for draw in dataDict {
                     let drawDict = draw as! [String: Any]
                     let drawResult = DrawResult(dictionary: drawDict)
-                    print("draw: \(drawResult)")
                     self.tableArray.append(drawResult)
                 }
                 DispatchQueue.main.async {
