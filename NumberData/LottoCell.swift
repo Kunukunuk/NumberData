@@ -13,6 +13,12 @@ class LottoCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var drawingNumbers: UILabel!
     
+    var draw: DrawResult! {
+        didSet {
+            dateLabel.text = draw.date
+            drawingNumbers.text = draw.winningNumbers
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

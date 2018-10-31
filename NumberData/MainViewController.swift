@@ -8,24 +8,30 @@
 
 import UIKit
 
-class MainViewController: UIViewController, UITableViewDataSource {
+class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
-    var tableArray: [DrawResult]?
+    var tableArray: [DrawResult] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.delegate = self
         tableView.dataSource = self
         getData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        //return tableArray?.count ?? 1
+        return tableArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LottoCell", for: indexPath) as! LottoCell
+        
+        if !tableArray.isEmpty {
+            cell.draw = tableArray[indexPath.row]
+        }
         
         return cell
     }
@@ -39,7 +45,13 @@ class MainViewController: UIViewController, UITableViewDataSource {
             if let data = data {
                 let dataDict = try! JSONSerialization.jsonObject(with: data, options: []) as! NSArray
                 for draw in dataDict {
-                    print("draw: \(draw)")
+                    let drawDict = draw as! [String: Any]
+                    let drawResult = DrawResult(dictionary: drawDict)
+                    print("draw: \(drawResult)")
+                    self.tableArray.append(drawResult)
+                }
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
                 }
             } else {
                 print("error: \(error?.localizedDescription)")

@@ -14,8 +14,10 @@ class DrawResult {
     var multiplier: Int?
     
     init(dictionary: [String: Any]) {
-        date = dictionary["draw_date"] as? String
+        let dateWithZero = dictionary["draw_date"] as? String
+        let dateArray = dateWithZero?.components(separatedBy: "T")
+        date = dateArray![0]
         winningNumbers = dictionary["winning_numbers"] as? String
-        bouns = dictionary["multiplier"] as? Int
+        multiplier = dictionary["multiplier"] as? Int
     }
 }
