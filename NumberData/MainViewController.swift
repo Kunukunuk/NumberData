@@ -12,6 +12,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     @IBOutlet weak var tableView: UITableView!
     var tableArray: [DrawResult] = []
+    var megaTable: [MegaNumbers] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,10 +69,9 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             if let data = data {
                 let dataDict = try! JSONSerialization.jsonObject(with: data, options: []) as! NSArray
                 for draw in dataDict {
-                    print("draw: \(draw)")
-                    //let drawDict = draw as! [String: Any]
-                    //let drawResult = DrawResult(dictionary: drawDict)
-                    //self.tableArray.append(drawResult)
+                    let megaDict = draw as! [String: Any]
+                    let megaNumber = MegaNumbers(dictionary: megaDict)
+                    self.megaTable.append(megaNumber)
                 }
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
