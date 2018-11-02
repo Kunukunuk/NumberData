@@ -16,7 +16,9 @@ class LottoAPIManager {
         session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
     }
     
-    func getPowerballNumbers() {
+    func getPowerballNumbers(completion: @escaping ([PowerNumbers]?, Error?) -> ()) {
+        
+        var powerball: [PowerNumbers] = []
         
         let url = URL(string: "https://data.ny.gov/resource/8vkr-v8vh.json")!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 5)
@@ -26,20 +28,21 @@ class LottoAPIManager {
                 let dataDict = try! JSONSerialization.jsonObject(with: data, options: []) as! NSArray
                 for draw in dataDict {
                     let drawDict = draw as! [String: Any]
-                    let drawResult = DrawResult(dictionary: drawDict)
+                    let drawResult = PowerNumbers(dictionary: drawDict)
+                    powerball.append(drawResult)
                 }
-//                DispatchQueue.main.async {
-//                    self.tableView.reloadData()
-//                }
+                completion(powerball, nil)
             } else {
                 print("error: \(error?.localizedDescription)")
+                completion(nil, error)
             }
         }
         task.resume()
     }
     
-    func getMegamillionNumbers() {
+    func getMegamillionNumbers(completion: @escaping ([MegaNumbers]?, Error?) -> ()) {
         
+        var megamillion: [MegaNumbers] = []
         let url = URL(string: "https://data.ny.gov/resource/h6w8-42p9.json")!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 5)
         
@@ -49,12 +52,12 @@ class LottoAPIManager {
                 for draw in dataDict {
                     let megaDict = draw as! [String: Any]
                     let megaNumber = MegaNumbers(dictionary: megaDict)
+                    megamillion.append(megaNumber)
                 }
-//                DispatchQueue.main.async {
-//                    self.tableView.reloadData()
-//                }
+                completion(megamillion, nil)
             } else {
                 print("error: \(error?.localizedDescription)")
+                completion(nil, error)
             }
         }
         task.resume()

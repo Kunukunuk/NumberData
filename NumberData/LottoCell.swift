@@ -13,7 +13,7 @@ class LottoCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var drawingNumbers: UILabel!
     
-    var draw: DrawResult? {
+    var draw: PowerNumbers? {
         didSet {
             dateLabel.text = draw?.date
             drawingNumbers.text = draw?.winningNumbers
