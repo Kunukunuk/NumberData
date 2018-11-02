@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Lotto1-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="NumberData" customModuleProvider="target" sceneMemberID="viewController">
@@ -69,7 +69,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="4jj-zv-lPJ"/>
+                    <tabBarItem key="tabBarItem" title="Lotto1" id="4jj-zv-lPJ"/>
                     <connections>
                         <outlet property="tableView" destination="Yoz-h5-OkQ" id="7H4-6D-xRh"/>
                     </connections>
@@ -96,7 +96,7 @@
             </objects>
             <point key="canvasLocation" x="53.600000000000001" y="26.53673163418291"/>
         </scene>
-        <!--Item-->
+        <!--Lotto2-->
         <scene sceneID="Phq-ea-fxV">
             <objects>
                 <viewController id="033-mK-Qeh" sceneMemberID="viewController">
@@ -128,7 +128,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4Fl-h1-eXH"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="nPQ-HB-MjL"/>
+                    <tabBarItem key="tabBarItem" title="Lotto2" id="nPQ-HB-MjL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zfh-GJ-jJg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

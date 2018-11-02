@@ -14,6 +14,10 @@
 		0D1A97A42188002E000C010A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D1A97A22188002E000C010A /* LaunchScreen.storyboard */; };
 		0D1A97AC218806EA000C010A /* LottoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1A97AB218806EA000C010A /* LottoCell.swift */; };
 		0D1A97B02188079E000C010A /* DrawResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1A97AF2188079E000C010A /* DrawResult.swift */; };
+		0DBB6888218BC70900DA6AC8 /* PowerNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBB6887218BC70900DA6AC8 /* PowerNumbers.swift */; };
+		0DBB688A218BC76800DA6AC8 /* PowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBB6889218BC76800DA6AC8 /* PowerViewController.swift */; };
+		0DBB688F218BF62B00DA6AC8 /* LottoAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBB688E218BF62B00DA6AC8 /* LottoAPIManager.swift */; };
+		0DBB6891218BF66800DA6AC8 /* MegaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBB6890218BF66800DA6AC8 /* MegaViewController.swift */; };
 		0DC4B06421895E0C0057D4B7 /* MegaNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC4B06321895E0C0057D4B7 /* MegaNumbers.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +31,10 @@
 		0D1A97A52188002E000C010A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D1A97AB218806EA000C010A /* LottoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoCell.swift; sourceTree = "<group>"; };
 		0D1A97AF2188079E000C010A /* DrawResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawResult.swift; sourceTree = "<group>"; };
+		0DBB6887218BC70900DA6AC8 /* PowerNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerNumbers.swift; sourceTree = "<group>"; };
+		0DBB6889218BC76800DA6AC8 /* PowerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerViewController.swift; sourceTree = "<group>"; };
+		0DBB688E218BF62B00DA6AC8 /* LottoAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoAPIManager.swift; sourceTree = "<group>"; };
+		0DBB6890218BF66800DA6AC8 /* MegaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MegaViewController.swift; sourceTree = "<group>"; };
 		0DC4B06321895E0C0057D4B7 /* MegaNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MegaNumbers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,16 +69,44 @@
 			isa = PBXGroup;
 			children = (
 				0D1A97992188002C000C010A /* AppDelegate.swift */,
+				0DBB688E218BF62B00DA6AC8 /* LottoAPIManager.swift */,
+				0DBB688D218BF55F00DA6AC8 /* View */,
+				0DBB688C218BC85900DA6AC8 /* Model */,
 				0D1A979B2188002C000C010A /* MainViewController.swift */,
 				0D1A97AB218806EA000C010A /* LottoCell.swift */,
 				0D1A97AF2188079E000C010A /* DrawResult.swift */,
-				0DC4B06321895E0C0057D4B7 /* MegaNumbers.swift */,
+				0DBB688B218BC77200DA6AC8 /* Controller */,
 				0D1A979D2188002C000C010A /* Main.storyboard */,
 				0D1A97A02188002E000C010A /* Assets.xcassets */,
 				0D1A97A22188002E000C010A /* LaunchScreen.storyboard */,
 				0D1A97A52188002E000C010A /* Info.plist */,
 			);
 			path = NumberData;
+			sourceTree = "<group>";
+		};
+		0DBB688B218BC77200DA6AC8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0DBB6889218BC76800DA6AC8 /* PowerViewController.swift */,
+				0DBB6890218BF66800DA6AC8 /* MegaViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0DBB688C218BC85900DA6AC8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0DBB6887218BC70900DA6AC8 /* PowerNumbers.swift */,
+				0DC4B06321895E0C0057D4B7 /* MegaNumbers.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0DBB688D218BF55F00DA6AC8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +182,13 @@
 			files = (
 				0D1A97B02188079E000C010A /* DrawResult.swift in Sources */,
 				0DC4B06421895E0C0057D4B7 /* MegaNumbers.swift in Sources */,
+				0DBB6888218BC70900DA6AC8 /* PowerNumbers.swift in Sources */,
 				0D1A979C2188002C000C010A /* MainViewController.swift in Sources */,
+				0DBB6891218BF66800DA6AC8 /* MegaViewController.swift in Sources */,
 				0D1A97AC218806EA000C010A /* LottoCell.swift in Sources */,
 				0D1A979A2188002C000C010A /* AppDelegate.swift in Sources */,
+				0DBB688A218BC76800DA6AC8 /* PowerViewController.swift in Sources */,
+				0DBB688F218BF62B00DA6AC8 /* LottoAPIManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
