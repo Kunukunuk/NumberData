@@ -9,16 +9,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Lotto1-->
+        <!--PowerBall-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="NumberData" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="PowerViewController" customModule="NumberData" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Yoz-h5-OkQ">
-                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LottoCell" rowHeight="91" id="0p8-yG-rxu" customClass="LottoCell" customModule="NumberData" customModuleProvider="target">
@@ -69,14 +69,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Lotto1" id="4jj-zv-lPJ"/>
+                    <navigationItem key="navigationItem" title="PowerBall" id="zgb-EI-3Bc"/>
                     <connections>
-                        <outlet property="tableView" destination="Yoz-h5-OkQ" id="7H4-6D-xRh"/>
+                        <outlet property="tableView" destination="Yoz-h5-OkQ" id="3z5-dn-pGN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="993" y="-297"/>
+            <point key="canvasLocation" x="1932" y="-297.30134932533736"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="bhv-4r-FNd">
@@ -84,37 +84,66 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="45X-yD-HDM" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ksz-9W-oMJ">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="B1r-Jp-MgL"/>
-                        <segue destination="033-mK-Qeh" kind="relationship" relationship="viewControllers" id="Njk-ss-75K"/>
+                        <segue destination="2pD-5p-oEx" kind="relationship" relationship="viewControllers" id="B1r-Jp-MgL"/>
+                        <segue destination="Zok-fa-qjk" kind="relationship" relationship="viewControllers" id="Njk-ss-75K"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vvk-PI-N1z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="53.600000000000001" y="26.53673163418291"/>
         </scene>
-        <!--Lotto2-->
+        <!--MegaMillions-->
         <scene sceneID="Phq-ea-fxV">
             <objects>
-                <viewController id="033-mK-Qeh" sceneMemberID="viewController">
+                <viewController id="033-mK-Qeh" customClass="MegaViewController" customModule="NumberData" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E1j-Ij-soH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nYa-II-Zcc">
-                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="121" id="S0h-q5-H2A">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="121"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LottoCell" rowHeight="91" id="qHg-9s-Ioh" customClass="LottoCell" customModule="NumberData" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="91"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="S0h-q5-H2A" id="dvS-zb-ELx">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="120.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qHg-9s-Ioh" id="zVK-oJ-JAg">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogO-cm-SWm">
+                                                    <rect key="frame" x="20" y="16" width="335" height="30"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Numbers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zbg-gU-Vip">
+                                                    <rect key="frame" x="20" y="51" width="335" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="Zbg-gU-Vip" secondAttribute="bottom" constant="5" id="04J-6l-BsY"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ogO-cm-SWm" secondAttribute="trailing" constant="5" id="4uQ-PU-6gg"/>
+                                                <constraint firstItem="Zbg-gU-Vip" firstAttribute="top" secondItem="ogO-cm-SWm" secondAttribute="bottom" constant="5" id="JEd-93-uYJ"/>
+                                                <constraint firstItem="ogO-cm-SWm" firstAttribute="top" secondItem="zVK-oJ-JAg" secondAttribute="topMargin" constant="5" id="iun-5T-Yto"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Zbg-gU-Vip" secondAttribute="trailing" constant="5" id="mXh-6s-48h"/>
+                                                <constraint firstItem="Zbg-gU-Vip" firstAttribute="leading" secondItem="ogO-cm-SWm" secondAttribute="leading" id="veC-VQ-YKE"/>
+                                                <constraint firstItem="Zbg-gU-Vip" firstAttribute="leading" secondItem="zVK-oJ-JAg" secondAttribute="leadingMargin" constant="5" id="x0i-aw-KxK"/>
+                                                <constraint firstItem="ogO-cm-SWm" firstAttribute="leading" secondItem="zVK-oJ-JAg" secondAttribute="leadingMargin" constant="5" id="yA7-ZP-UiT"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="ogO-cm-SWm" id="I5f-pk-Oyp"/>
+                                            <outlet property="drawingNumbers" destination="Zbg-gU-Vip" id="Ts5-tC-18U"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -128,9 +157,50 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4Fl-h1-eXH"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Lotto2" id="nPQ-HB-MjL"/>
+                    <navigationItem key="navigationItem" title="MegaMillions" id="vGf-RE-sfk"/>
+                    <connections>
+                        <outlet property="tableView" destination="nYa-II-Zcc" id="0gV-rG-hqt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zfh-GJ-jJg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1932" y="589.65517241379314"/>
+        </scene>
+        <!--Lotto1-->
+        <scene sceneID="qCu-45-rdX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2pD-5p-oEx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Lotto1" id="4jj-zv-lPJ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zBe-V0-pNc">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="HlV-KW-mch"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ewo-bM-xw1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="992.79999999999995" y="-297.30134932533736"/>
+        </scene>
+        <!--Lotto2-->
+        <scene sceneID="Xuz-0o-YjY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zok-fa-qjk" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Lotto2" id="nPQ-HB-MjL"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="m5A-LB-wKu">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="033-mK-Qeh" kind="relationship" relationship="rootViewController" id="mJi-P7-idd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1jU-xT-I2w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="992.79999999999995" y="589.65517241379314"/>
         </scene>

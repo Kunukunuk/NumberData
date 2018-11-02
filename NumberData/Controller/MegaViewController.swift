@@ -8,15 +8,40 @@
 
 import UIKit
 
-class MegaViewController: UIViewController {
+class MegaViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var tableView: UITableView!
+    var megaArray: [MegaNumbers] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        getNumbers()
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return megaArray.count
+    }
 
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LottoCell", for: indexPath) as! LottoCell
+        cell.mega = megaArray[indexPath.row]
+        return cell
+    }
+    
+    func getNumbers() {
+        
+        LottoAPIManager().getMegamillionNumbers { (meganumbers, error) in
+            if let meganumbers = meganumbers {
+                self.megaArray = meganumbers
+                self.tableView.reloadData()
+            }
+        }
+        
+    }
     /*
     // MARK: - Navigation
 

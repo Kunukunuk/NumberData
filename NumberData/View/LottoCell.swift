@@ -13,10 +13,17 @@ class LottoCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var drawingNumbers: UILabel!
     
-    var draw: PowerNumbers? {
+    var power: PowerNumbers? {
         didSet {
-            dateLabel.text = draw?.date
-            drawingNumbers.text = draw?.winningNumbers
+            dateLabel.text = power?.date
+            drawingNumbers.text = power?.winningNumbers
+        }
+    }
+    
+    var mega: MegaNumbers? {
+        didSet {
+            dateLabel.text = mega?.date
+            drawingNumbers.text = mega?.winningNumbers
         }
     }
     override func awakeFromNib() {
