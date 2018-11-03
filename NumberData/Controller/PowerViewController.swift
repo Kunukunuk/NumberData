@@ -34,7 +34,7 @@ class PowerViewController: UIViewController, UITableViewDataSource, UITableViewD
         return cell
     }
     
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
     func getNumbers() {
