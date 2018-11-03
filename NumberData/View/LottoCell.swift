@@ -16,7 +16,7 @@ class LottoCell: UITableViewCell {
     var power: PowerNumbers? {
         didSet {
             dateLabel.text = power?.date
-            drawingNumbers.text = power?.winningNumbers
+            drawingNumbers.text = (power?.winningNumbers)! + " \nMultiplier: " + (power?.multiplier)!
         }
     }
     

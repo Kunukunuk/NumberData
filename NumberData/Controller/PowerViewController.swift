@@ -34,6 +34,9 @@ class PowerViewController: UIViewController, UITableViewDataSource, UITableViewD
         return cell
     }
     
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
     func getNumbers() {
         
         LottoAPIManager().getPowerballNumbers { (powernumbers, error) in
