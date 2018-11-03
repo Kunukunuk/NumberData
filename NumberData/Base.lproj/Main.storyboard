@@ -166,11 +166,11 @@
             </objects>
             <point key="canvasLocation" x="1932" y="589.65517241379314"/>
         </scene>
-        <!--Lotto1-->
+        <!--Power-->
         <scene sceneID="qCu-45-rdX">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2pD-5p-oEx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Lotto1" id="4jj-zv-lPJ"/>
+                    <tabBarItem key="tabBarItem" title="Power" id="4jj-zv-lPJ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zBe-V0-pNc">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -185,11 +185,11 @@
             </objects>
             <point key="canvasLocation" x="992.79999999999995" y="-297.30134932533736"/>
         </scene>
-        <!--Lotto2-->
+        <!--Mega-->
         <scene sceneID="Xuz-0o-YjY">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zok-fa-qjk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Lotto2" id="nPQ-HB-MjL"/>
+                    <tabBarItem key="tabBarItem" title="Mega" id="nPQ-HB-MjL"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="m5A-LB-wKu">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
