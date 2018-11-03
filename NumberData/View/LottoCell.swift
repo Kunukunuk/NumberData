@@ -23,7 +23,7 @@ class LottoCell: UITableViewCell {
     var mega: MegaNumbers? {
         didSet {
             dateLabel.text = mega?.date
-            drawingNumbers.text = mega?.winningNumbers
+            drawingNumbers.text = (mega?.winningNumbers)! + " " + (mega?.megaBall)!
         }
     }
     override func awakeFromNib() {

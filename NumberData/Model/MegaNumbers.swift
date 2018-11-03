@@ -11,13 +11,15 @@ import Foundation
 class MegaNumbers {
     var date: String?
     var winningNumbers: String?
-    var megaBall: Int?
+    var megaBall: String?
     
     init(dictionary: [String: Any]) {
+    
         let dateWithZero = dictionary["draw_date"] as? String
         let dateArray = dateWithZero?.components(separatedBy: "T")
         date = dateArray![0]
         winningNumbers = dictionary["winning_numbers"] as? String
-        megaBall = dictionary["mega_ball"] as? Int
+        megaBall = dictionary["mega_ball"] as? String
+        
     }
 }
