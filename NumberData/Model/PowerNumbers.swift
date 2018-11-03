@@ -11,13 +11,15 @@ import Foundation
 class PowerNumbers{
     var date: String?
     var winningNumbers: String?
-    var multiplier: Int?
+    var multiplier: String?
     
     init(dictionary: [String: Any]) {
+        
         let dateWithZero = dictionary["draw_date"] as? String
         let dateArray = dateWithZero?.components(separatedBy: "T")
         date = dateArray![0]
         winningNumbers = dictionary["winning_numbers"] as? String
-        multiplier = dictionary["multiplier"] as? Int
+        multiplier = dictionary["multiplier"] as? String
+
     }
 }
