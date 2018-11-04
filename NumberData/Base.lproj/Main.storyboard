@@ -72,7 +72,7 @@
                     <navigationItem key="navigationItem" title="PowerBall" id="zgb-EI-3Bc">
                         <barButtonItem key="rightBarButtonItem" title="Stats" id="ngC-E0-V91">
                             <connections>
-                                <segue destination="TdT-1c-az1" kind="show" id="You-aR-All"/>
+                                <segue destination="TdT-1c-az1" kind="show" identifier="gotostats" id="You-aR-All"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -181,7 +181,7 @@
                     <navigationItem key="navigationItem" title="MegaMillions" id="vGf-RE-sfk">
                         <barButtonItem key="rightBarButtonItem" title="Stats" id="EBD-nx-kq6">
                             <connections>
-                                <segue destination="TdT-1c-az1" kind="show" id="k6n-lo-KUk"/>
+                                <segue destination="TdT-1c-az1" kind="show" identifier="gotostats" id="k6n-lo-KUk"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -233,6 +233,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="k6n-lo-KUk"/>
+        <segue reference="You-aR-All"/>
     </inferredMetricsTieBreakers>
 </document>

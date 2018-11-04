@@ -10,10 +10,13 @@ import UIKit
 
 class StatsViewController: UIViewController {
 
+    var mega: [MegaNumbers]?
+    var power: [PowerNumbers]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        print("\(mega?.count) \n\(power?.count)")
     }
     
 
