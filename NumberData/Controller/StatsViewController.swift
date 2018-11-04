@@ -13,7 +13,7 @@ class StatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var mega: [MegaNumbers]?
     var power: [PowerNumbers]?
     var numbers: [String: Int] = [:]
-    var numbersInt: [Int]?
+    var dictArray: [(key: String, value: Int)] = []
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -54,20 +54,21 @@ class StatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return dictArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StatCell", for: indexPath) as! StatCell
         
-        cell.numbers = numbers
+        cell.draw = dictArray[indexPath.row]
         
         return cell
     }
     
     func sortArray() {
         
-        //numbers = numbers.sorted(by: { $0.value > $1.value})
+        dictArray = numbers.sorted(by: { $0.value > $1.value})
+        tableView.reloadData()
         
     }
     /*
