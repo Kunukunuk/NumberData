@@ -69,7 +69,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="PowerBall" id="zgb-EI-3Bc"/>
+                    <navigationItem key="navigationItem" title="PowerBall" id="zgb-EI-3Bc">
+                        <barButtonItem key="rightBarButtonItem" title="Stats" id="ngC-E0-V91">
+                            <connections>
+                                <segue destination="TdT-1c-az1" kind="show" id="You-aR-All"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Yoz-h5-OkQ" id="3z5-dn-pGN"/>
                     </connections>
@@ -77,6 +83,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1932" y="-297.30134932533736"/>
+        </scene>
+        <!--Stats View Controller-->
+        <scene sceneID="cEr-zG-mku">
+            <objects>
+                <viewController id="TdT-1c-az1" customClass="StatsViewController" customModule="NumberData" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sUw-Pi-Cpo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="bcO-wd-XJF"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IHE-BQ-Z4k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3144" y="117"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="bhv-4r-FNd">
@@ -157,7 +178,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4Fl-h1-eXH"/>
                     </view>
-                    <navigationItem key="navigationItem" title="MegaMillions" id="vGf-RE-sfk"/>
+                    <navigationItem key="navigationItem" title="MegaMillions" id="vGf-RE-sfk">
+                        <barButtonItem key="rightBarButtonItem" title="Stats" id="EBD-nx-kq6">
+                            <connections>
+                                <segue destination="TdT-1c-az1" kind="show" id="k6n-lo-KUk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="nYa-II-Zcc" id="0gV-rG-hqt"/>
                     </connections>
@@ -205,4 +232,7 @@
             <point key="canvasLocation" x="992.79999999999995" y="589.65517241379314"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="k6n-lo-KUk"/>
+    </inferredMetricsTieBreakers>
 </document>
