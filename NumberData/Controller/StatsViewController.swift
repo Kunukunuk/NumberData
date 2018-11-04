@@ -49,8 +49,17 @@ class StatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func getPowerStats() {
         for singleDraw in power! {
-            let numArray = singleDraw.winningNumbers?.components(separatedBy: " ")
+            let stringArray = singleDraw.winningNumbers?.components(separatedBy: " ")
+            for index in 0..<stringArray!.count-1 {
+                let number = stringArray![index]
+                if numbers[number] == nil {
+                    numbers[number] = 1
+                } else {
+                    numbers[number]! += 1
+                }
+            }
         }
+        sortArray()
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
