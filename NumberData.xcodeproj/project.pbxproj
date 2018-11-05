@@ -18,6 +18,7 @@
 		0DBB6891218BF66800DA6AC8 /* MegaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBB6890218BF66800DA6AC8 /* MegaViewController.swift */; };
 		0DBB6893218E72C800DA6AC8 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBB6892218E72C800DA6AC8 /* StatsViewController.swift */; };
 		0DBB6895218E79AE00DA6AC8 /* StatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBB6894218E79AE00DA6AC8 /* StatCell.swift */; };
+		0DBB6897218FE73A00DA6AC8 /* EachNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBB6896218FE73A00DA6AC8 /* EachNumberViewController.swift */; };
 		0DC4B06421895E0C0057D4B7 /* MegaNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC4B06321895E0C0057D4B7 /* MegaNumbers.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		0DBB6890218BF66800DA6AC8 /* MegaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MegaViewController.swift; sourceTree = "<group>"; };
 		0DBB6892218E72C800DA6AC8 /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 		0DBB6894218E79AE00DA6AC8 /* StatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatCell.swift; sourceTree = "<group>"; };
+		0DBB6896218FE73A00DA6AC8 /* EachNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EachNumberViewController.swift; sourceTree = "<group>"; };
 		0DC4B06321895E0C0057D4B7 /* MegaNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MegaNumbers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +89,7 @@
 				0DBB6889218BC76800DA6AC8 /* PowerViewController.swift */,
 				0DBB6890218BF66800DA6AC8 /* MegaViewController.swift */,
 				0DBB6892218E72C800DA6AC8 /* StatsViewController.swift */,
+				0DBB6896218FE73A00DA6AC8 /* EachNumberViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				0D1A97AC218806EA000C010A /* LottoCell.swift in Sources */,
 				0D1A979A2188002C000C010A /* AppDelegate.swift in Sources */,
 				0DBB688A218BC76800DA6AC8 /* PowerViewController.swift in Sources */,
+				0DBB6897218FE73A00DA6AC8 /* EachNumberViewController.swift in Sources */,
 				0DBB688F218BF62B00DA6AC8 /* LottoAPIManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

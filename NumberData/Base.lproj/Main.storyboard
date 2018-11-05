@@ -119,6 +119,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="numberLabel" destination="Oiu-mh-1MJ" id="jMi-6p-qGh"/>
+                                            <segue destination="abP-gg-Mng" kind="presentation" id="V1p-fs-wxC"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -140,6 +141,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IHE-BQ-Z4k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3143.1999999999998" y="116.49175412293854"/>
+        </scene>
+        <!--Each Number View Controller-->
+        <scene sceneID="4RF-ek-fAY">
+            <objects>
+                <viewController id="abP-gg-Mng" customClass="EachNumberViewController" customModule="NumberData" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9G0-Kq-c7J">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QlL-4u-ZGz">
+                                <rect key="frame" x="0.0" y="621" width="375" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Dismiss"/>
+                                <connections>
+                                    <action selector="dismissView:" destination="abP-gg-Mng" eventType="touchUpInside" id="kCG-TR-2Ol"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gqi-nG-8Df" firstAttribute="bottom" secondItem="QlL-4u-ZGz" secondAttribute="bottom" constant="10" id="L3J-QH-Fib"/>
+                            <constraint firstItem="gqi-nG-8Df" firstAttribute="trailing" secondItem="QlL-4u-ZGz" secondAttribute="trailing" id="MBw-vG-Zvf"/>
+                            <constraint firstItem="QlL-4u-ZGz" firstAttribute="leading" secondItem="gqi-nG-8Df" secondAttribute="leading" id="cnS-g7-RIT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gqi-nG-8Df"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aRB-95-uvW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4178" y="116"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="bhv-4r-FNd">

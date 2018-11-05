@@ -49,6 +49,8 @@ class StatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func getPowerStats() {
+        
+        
         for singleDraw in power! {
             let stringArray = singleDraw.winningNumbers?.components(separatedBy: " ")
             for index in 0..<stringArray!.count-1 {
