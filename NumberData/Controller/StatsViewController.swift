@@ -98,10 +98,6 @@ class StatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         for dict in dictArray {
             probability.append( (Double(dict.value) / Double(totalDraw)) * 100)
         }
-        
-        for each in probability {
-            print("each: \(each)")
-        }
     }
     /*
     // MARK: - Navigation
