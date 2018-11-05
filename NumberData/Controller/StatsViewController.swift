@@ -14,6 +14,7 @@ class StatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var power: [PowerNumbers]?
     var numbers: [String: Int] = [:]
     var dictArray: [(key: String, value: Int)] = []
+    var probability: [Double] = []
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -45,6 +46,7 @@ class StatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             }
         }
         sortArray()
+        calculateProb()
     }
     
     func getPowerStats() {
@@ -79,6 +81,17 @@ class StatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         dictArray = numbers.sorted(by: { $0.value > $1.value})
         tableView.reloadData()
         
+    }
+    
+    func calculateProb() {
+        let totalDraw = (mega?.count)!
+        for dict in dictArray {
+            probability.append( (Double(dict.value) / Double(totalDraw)) * 100)
+        }
+        
+        for each in probability {
+            print("each: \(each)")
+        }
     }
     /*
     // MARK: - Navigation
