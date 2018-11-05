@@ -12,15 +12,6 @@ class StatCell: UITableViewCell {
 
     @IBOutlet weak var numberLabel: UILabel!
     
-    /*var numbers: [String: Int]? {
-        didSet {
-            numberLabel.text = ""
-            for number in numbers! {
-                numberLabel.text = numberLabel.text! + "\(number.key): \(number.value)\n"
-            }
-        }
-    }*/
-    
     var draw: (key: String, value: Int)? {
         didSet {
             numberLabel.text = "\(draw!.key): \(draw!.value)"

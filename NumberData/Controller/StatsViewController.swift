@@ -46,7 +46,6 @@ class StatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             }
         }
         sortArray()
-        calculateProb()
     }
     
     func getPowerStats() {
@@ -72,6 +71,8 @@ class StatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let cell = tableView.dequeueReusableCell(withIdentifier: "StatCell", for: indexPath) as! StatCell
         
         cell.draw = dictArray[indexPath.row]
+        let doubleString = String(format: "%.2f", probability[indexPath.row])
+        cell.numberLabel.text = cell.numberLabel.text! + " \(doubleString)%"
         
         return cell
     }
@@ -81,10 +82,19 @@ class StatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         dictArray = numbers.sorted(by: { $0.value > $1.value})
         tableView.reloadData()
         
+        calculateProb()
+        
     }
     
     func calculateProb() {
-        let totalDraw = (mega?.count)!
+        var totalDraw = 0
+        
+        if mega != nil {
+            totalDraw = (mega?.count)!
+        } else if power != nil {
+            totalDraw = (power?.count)!
+        }
+        
         for dict in dictArray {
             probability.append( (Double(dict.value) / Double(totalDraw)) * 100)
         }
