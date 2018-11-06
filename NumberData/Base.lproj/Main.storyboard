@@ -119,7 +119,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="numberLabel" destination="Oiu-mh-1MJ" id="jMi-6p-qGh"/>
-                                            <segue destination="abP-gg-Mng" kind="presentation" id="V1p-fs-wxC"/>
+                                            <segue destination="abP-gg-Mng" kind="presentation" identifier="details" id="V1p-fs-wxC"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

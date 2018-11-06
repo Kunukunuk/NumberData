@@ -9,7 +9,7 @@
 import UIKit
 
 class EachNumberViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
