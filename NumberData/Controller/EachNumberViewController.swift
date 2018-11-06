@@ -10,6 +10,11 @@ import UIKit
 
 class EachNumberViewController: UIViewController {
     
+    
+    @IBOutlet weak var numberLabel: UILabel!
+    @IBOutlet weak var stillInUse: UILabel!
+    @IBOutlet weak var occurrenceLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
