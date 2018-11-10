@@ -200,6 +200,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gqi-nG-8Df"/>
                     </view>
+                    <connections>
+                        <outlet property="numberLabel" destination="8up-QA-spT" id="dGq-0x-VUf"/>
+                        <outlet property="occurrenceLabel" destination="qUC-IF-TRQ" id="6vL-Cm-P9Q"/>
+                        <outlet property="stillInUse" destination="1er-N9-PYh" id="Bu8-Sh-Y4a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aRB-95-uvW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
