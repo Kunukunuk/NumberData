@@ -21,7 +21,7 @@ class EachNumberViewController: UIViewController {
         
         numberLabel.text = dictArray?.key
         stillInUse.text = "Yes"
-        occurrenceLabel.text = "\(dictArray?.value)"
+        occurrenceLabel.text = "\(String(describing: (dictArray?.value)!))"
     }
     
     @IBAction func dismissView(_ sender: UIButton) {
