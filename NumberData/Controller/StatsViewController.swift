@@ -105,6 +105,9 @@ class StatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "details" {
             let destinationVC = segue.destination as! EachNumberViewController
+            if let indextPath = tableView.indexPathForSelectedRow {
+                destinationVC.dictArray = dictArray[indextPath.row]
+            }
         }
     }
 

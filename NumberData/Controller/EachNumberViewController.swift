@@ -14,11 +14,14 @@ class EachNumberViewController: UIViewController {
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var stillInUse: UILabel!
     @IBOutlet weak var occurrenceLabel: UILabel!
+    var dictArray: (key: String, value: Int)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        numberLabel.text = dictArray?.key
+        stillInUse.text = "Yes"
+        occurrenceLabel.text = "\(dictArray?.value)"
     }
     
     @IBAction func dismissView(_ sender: UIButton) {
